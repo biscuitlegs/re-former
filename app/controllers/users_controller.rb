@@ -14,7 +14,7 @@ class UsersController < ApplicationController
         if @user.save
             redirect_to users_path
         else
-            render(:new)
+            render :new
         end
     end
 
@@ -28,8 +28,7 @@ class UsersController < ApplicationController
         if @user.update(user_params)
             redirect_to users_path
         else
-            @user.valid?
-            render(:edit)
+            render :edit
         end
     end
 
